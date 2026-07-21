@@ -16,15 +16,15 @@
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
-            <a href="index.html" class="logo">
+            <a href="#" class="logo">
                 <img src="The B Hive Logo.png" alt="The B Hive Resort Logo">
             </a>
             <div class="nav-links">
-                <a href="index.html">Home</a>
-                <a href="about.html">About</a>
-                <a href="amenities.html">Amenities</a>
-                <a href="gallery.html">Gallery</a>
-                <a href="contact.html">Contact</a>
+                <a href="#about">Overview</a>
+                <a href="#amenities">Amenities</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#reviews">Reviews</a>
+                <a href="#location">Location</a>
             </div>
             <a href="https://www.booking.com/hotel/in/the-b-hive.html" target="_blank" class="btn-primary">Book Now</a>
         </div>
@@ -41,7 +41,7 @@
             <p>Experience the perfect blend of nature and comfort at The B Hive Resort in Londa, Karnataka.</p>
             <div class="hero-actions">
                 <a href="https://www.booking.com/hotel/in/the-b-hive.html" target="_blank" class="btn-primary btn-large">Check Availability</a>
-                <a href="about.html" class="btn-outline btn-large">Discover More</a>
+                <a href="#about" class="btn-outline btn-large">Discover More</a>
             </div>
         </div>
     </header>
@@ -72,25 +72,142 @@
         </div>
     </section>
 
-    <!-- Home Highlight Section -->
-    <section class="about section">
-        <div class="container text-center" style="max-width: 800px;">
-            <span class="section-subtitle">Welcome to The B Hive</span>
-            <h2 class="section-title">A Nature Retreat Like No Other</h2>
-            <p style="margin-bottom: 2rem;">Nestled in the lush greenery of Londa, Karnataka, The B Hive Resort offers a serene getaway for those seeking peace, adventure, and relaxation.</p>
-            <a href="about.html" class="btn-primary">Learn About Us</a>
+    <!-- About Section -->
+    <section class="about section" id="about">
+        <div class="container layout-grid-2">
+            <div class="about-text">
+                <span class="section-subtitle">Welcome to The B Hive</span>
+                <h2 class="section-title">A Nature Retreat Like No Other</h2>
+                <p>Nestled in the lush greenery of Londa, Karnataka, The B Hive Resort offers a serene getaway for those seeking peace, adventure, and relaxation. Rated 4.8 by our guests, we pride ourselves on exceptional hospitality and beautiful surroundings.</p>
+                <div class="stats-row">
+                    <div class="stat">
+                        <i class="fa-solid fa-map-location-dot"></i>
+                        <span>Great for Sightseeing</span>
+                    </div>
+                    <div class="stat">
+                        <i class="fa-solid fa-person-swimming"></i>
+                        <span>Recreation</span>
+                    </div>
+                </div>
+            </div>
+            <div class="about-image-grid">
+                <img src="Images/Screenshot 2026-07-21 200830.png" alt="Resort View 1" class="img-main radius-large">
+                <img src="Images/Screenshot 2026-07-21 200848.png" alt="Resort View 2" class="img-sub radius-large shadow">
+            </div>
         </div>
     </section>
 
-    <section class="gallery section bg-light">
+    <!-- Amenities Section -->
+    <section class="amenities section bg-light" id="amenities">
         <div class="container text-center">
-            <h2 class="section-title">Explore The Property</h2>
-            <div class="image-gallery" style="grid-template-columns: 1fr 1fr 1fr; margin-bottom: 3rem;">
-                <img src="Images/Screenshot 2026-07-21 200830.png" alt="Highlight 1" class="gallery-img radius">
-                <img src="Images/Screenshot 2026-07-21 200928.png" alt="Highlight 2" class="gallery-img radius">
-                <img src="Images/Screenshot 2026-07-21 200957.png" alt="Highlight 3" class="gallery-img radius">
+            <span class="section-subtitle">Premium Comfort</span>
+            <h2 class="section-title">Resort Amenities</h2>
+            <div class="amenities-grid">
+                <div class="amenity-card">
+                    <div class="icon-wrapper"><i class="fa-solid fa-wifi"></i></div>
+                    <h3>Free Wi-Fi</h3>
+                    <p>Stay connected with high-speed internet throughout the property.</p>
+                </div>
+                <div class="amenity-card">
+                    <div class="icon-wrapper"><i class="fa-solid fa-mug-hot"></i></div>
+                    <h3>Free Breakfast</h3>
+                    <p>Start your day right with our complimentary breakfast spread.</p>
+                </div>
+                <div class="amenity-card">
+                    <div class="icon-wrapper"><i class="fa-solid fa-square-parking"></i></div>
+                    <h3>Free Parking</h3>
+                    <p>Secure and convenient parking available for all guests.</p>
+                </div>
+                <div class="amenity-card">
+                    <div class="icon-wrapper"><i class="fa-solid fa-water-ladder"></i></div>
+                    <h3>Outdoor Pool</h3>
+                    <p>Take a refreshing dip in our pristine outdoor swimming pool.</p>
+                </div>
+                <div class="amenity-card">
+                    <div class="icon-wrapper"><i class="fa-regular fa-snowflake"></i></div>
+                    <h3>Air-Conditioned</h3>
+                    <p>Climate-controlled rooms for your ultimate comfort.</p>
+                </div>
+                <div class="amenity-card">
+                    <div class="icon-wrapper"><i class="fa-solid fa-shirt"></i></div>
+                    <h3>Laundry Service</h3>
+                    <p>Convenient on-site laundry services for a hassle-free stay.</p>
+                </div>
             </div>
-            <a href="gallery.html" class="btn-primary">View Full Gallery</a>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery section" id="gallery">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-subtitle">Discover</span>
+                <h2 class="section-title">Our Property</h2>
+            </div>
+            <div class="image-gallery">
+                <img src="Images/Screenshot 2026-07-21 200912.png" alt="Gallery Image" class="gallery-img radius">
+                <img src="Images/Screenshot 2026-07-21 200928.png" alt="Gallery Image" class="gallery-img radius">
+                <img src="Images/Screenshot 2026-07-21 200947.png" alt="Gallery Image" class="gallery-img radius">
+                <img src="Images/Screenshot 2026-07-21 200957.png" alt="Gallery Image" class="gallery-img radius">
+                <img src="Images/Screenshot 2026-07-21 201017.png" alt="Gallery Image" class="gallery-img radius">
+                <img src="Images/Screenshot 2026-07-21 201038.png" alt="Gallery Image" class="gallery-img radius">
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section class="reviews section bg-light" id="reviews">
+        <div class="container layout-grid-2">
+            <div class="review-summary">
+                <span class="section-subtitle">Guest Feedback</span>
+                <h2 class="section-title">What People Say</h2>
+                <div class="score-display">
+                    <div class="score">4.8</div>
+                    <div class="score-details">
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </div>
+                        <p>Based on 270 Google Reviews</p>
+                    </div>
+                </div>
+                <div class="review-bars">
+                    <div class="bar-row"><span class="label">5</span><div class="bar"><div class="fill" style="width: 85%;"></div></div></div>
+                    <div class="bar-row"><span class="label">4</span><div class="bar"><div class="fill" style="width: 10%;"></div></div></div>
+                    <div class="bar-row"><span class="label">3</span><div class="bar"><div class="fill" style="width: 3%;"></div></div></div>
+                    <div class="bar-row"><span class="label">2</span><div class="bar"><div class="fill" style="width: 1%;"></div></div></div>
+                    <div class="bar-row"><span class="label">1</span><div class="bar"><div class="fill" style="width: 1%;"></div></div></div>
+                </div>
+            </div>
+            <div class="review-cards">
+                <!-- We showcase the general positive vibe -->
+                <div class="review-card radius shadow">
+                    <div class="reviewer">
+                        <div class="avatar bg-primary">A</div>
+                        <div>
+                            <h4>Arun Kumar</h4>
+                            <span class="date">2 weeks ago</span>
+                        </div>
+                    </div>
+                    <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    <p>"Amazing property amidst nature. The hospitality was excellent and the rooms were very clean. The pool is a great addition."</p>
+                </div>
+                <div class="review-card radius shadow mt-4">
+                    <div class="reviewer">
+                        <div class="avatar bg-secondary">S</div>
+                        <div>
+                            <h4>Sneha P.</h4>
+                            <span class="date">1 month ago</span>
+                        </div>
+                    </div>
+                    <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    <p>"Beautiful resort! Great for a weekend getaway from the city. Breakfast spread was delicious."</p>
+                </div>
+
+            </div>
         </div>
     </section>
 
@@ -99,7 +216,7 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-col brand-col">
-                    <a href="index.html" class="logo footer-logo">
+                    <a href="#" class="logo footer-logo">
                         <img src="The B Hive Logo.png" alt="The B Hive Resort Logo">
                     </a>
                     <p>Your perfect escape into nature's embrace, offering luxury, comfort, and unforgettable memories.</p>
@@ -120,6 +237,7 @@
                         <li>Free cancellation up to 4 days prior</li>
                     </ul>
                 </div>
+
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2026 The B Hive Resort. All Rights Reserved.</p>
