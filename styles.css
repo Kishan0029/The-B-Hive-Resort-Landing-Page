@@ -219,6 +219,11 @@ img {
     padding-top: 5rem;
 }
 
+.page-hero {
+    height: 50vh;
+    min-height: 400px;
+}
+
 .hero-overlay {
     position: absolute;
     top: 0;
