@@ -185,6 +185,11 @@ img {
 .logo img {
     height: 48px;
     width: auto;
+    transition: filter 0.3s ease;
+}
+
+.navbar:not(.scrolled) .logo img {
+    filter: brightness(0) invert(1);
 }
 
 .nav-links {
@@ -589,6 +594,10 @@ img {
     color: var(--white);
     margin-bottom: 1.5rem;
     display: inline-flex;
+}
+
+.footer-logo img {
+    filter: brightness(0) invert(1);
 }
 
 .brand-col p {
