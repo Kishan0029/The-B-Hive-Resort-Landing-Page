@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+# Allow Googlebot to index the menu PDF directly
+Allow: /menu.pdf
+
+Sitemap: https://thebhiveresort.in/sitemap.xml

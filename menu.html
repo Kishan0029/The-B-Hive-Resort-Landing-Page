@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ── SEO: Title & Description ── -->
+    <title>Menu | The B Hive Resort – Londa, Karnataka</title>
+    <meta name="description" content="Browse the full food & beverage menu at The B Hive Resort, Londa, Karnataka. View our A4 menu card with all dishes, drinks and prices.">
+    <meta name="keywords" content="The B Hive Resort menu, B Hive Resort food menu, B Hive Resort Londa menu, thebhiveresort.in menu, resort restaurant menu Londa Karnataka">
+
+    <!-- ── Canonical URL ── -->
+    <link rel="canonical" href="https://thebhiveresort.in/menu.html">
+
+    <!-- Direct PDF canonical so Google indexes menu.pdf as well -->
+    <link rel="alternate" type="application/pdf" href="https://thebhiveresort.in/menu.pdf" title="The B Hive Resort Menu Card">
+
+    <!-- ── Open Graph (social sharing) ── -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Menu | The B Hive Resort">
+    <meta property="og:description" content="View the full food and beverage menu at The B Hive Resort, Londa, Karnataka.">
+    <meta property="og:url" content="https://thebhiveresort.in/menu.html">
+    <meta property="og:image" content="https://thebhiveresort.in/The B Hive Logo.png">
+
+    <!-- ── Structured Data: Restaurant Menu ── -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FoodEstablishment",
+      "name": "The B Hive Resort",
+      "url": "https://thebhiveresort.in",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Londa",
+        "addressRegion": "Karnataka",
+        "postalCode": "591301",
+        "addressCountry": "IN"
+      },
+      "telephone": "+910953574513",
+      "hasMenu": {
+        "@type": "Menu",
+        "name": "The B Hive Resort Menu",
+        "url": "https://thebhiveresort.in/menu.pdf",
+        "description": "Full food and beverage menu at The B Hive Resort, Londa, Karnataka"
+      }
+    }
+    </script>
+
+    <!-- ── Styles ── -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* ── Menu-page-specific overrides ── */
+        .menu-hero {
+            min-height: 38vh;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 6rem 1.5rem 3rem;
+            position: relative;
+            overflow: hidden;
+        }
+        .menu-hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse at center, rgba(212,175,55,0.12) 0%, transparent 70%);
+        }
+        .menu-hero-content { position: relative; z-index: 2; }
+        .menu-hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.2rem, 6vw, 3.8rem);
+            color: #fff;
+            margin-bottom: 0.75rem;
+        }
+        .menu-hero h1 span { color: var(--gold, #d4af37); }
+        .menu-hero p { color: rgba(255,255,255,0.72); font-size: 1.1rem; max-width: 540px; margin: 0 auto 1.8rem; }
+
+        /* ── Download Button ── */
+        .btn-download {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.55rem;
+            background: linear-gradient(135deg, #d4af37, #f0c040);
+            color: #1a1a2e;
+            font-weight: 700;
+            font-size: 1rem;
+            padding: 0.85rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 20px rgba(212,175,55,0.35);
+        }
+        .btn-download:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(212,175,55,0.5);
+        }
+
+        /* ── PDF Viewer Wrapper ── */
+        .menu-section {
+            background: #0d0d1a;
+            padding: 3rem 1.5rem 5rem;
+        }
+        .menu-container {
+            max-width: 860px;
+            margin: 0 auto;
+        }
+        .menu-info-bar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        .menu-label {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            color: #fff;
+        }
+        .menu-label span { color: #d4af37; }
+
+        .pdf-frame-wrapper {
+            position: relative;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 8px 48px rgba(0,0,0,0.6);
+            border: 1px solid rgba(212,175,55,0.2);
+            background: #111;
+        }
+        .pdf-frame-wrapper iframe {
+            display: block;
+            width: 100%;
+            height: 85vh;
+            min-height: 620px;
+            border: none;
+        }
+
+        /* Fallback for browsers that block inline PDFs */
+        .pdf-fallback {
+            display: none;
+            padding: 3rem 2rem;
+            text-align: center;
+            color: rgba(255,255,255,0.7);
+        }
+        .pdf-fallback p { margin-bottom: 1.5rem; }
+
+        /* ── Mobile note ── */
+        .mobile-note {
+            display: none;
+            text-align: center;
+            color: rgba(255,255,255,0.6);
+            font-size: 0.9rem;
+            margin-top: 1rem;
+        }
+        @media (max-width: 640px) {
+            .pdf-frame-wrapper iframe { height: 60vh; min-height: 420px; }
+            .mobile-note { display: block; }
+            .menu-info-bar { flex-direction: column; align-items: flex-start; }
+        }
+
+        /* ── Decorative honeycomb dots ── */
+        .honeycomb-bg {
+            position: absolute;
+            inset: 0;
+            background-image:
+                radial-gradient(circle, rgba(212,175,55,0.08) 1px, transparent 1px);
+            background-size: 32px 32px;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="The B Hive Logo.png" alt="The B Hive Resort Logo">
+            </a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="amenities.html">Amenities</a>
+                <a href="menu.html" class="active">Menu</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <a href="https://www.booking.com/hotel/in/the-b-hive.html" target="_blank" class="btn-primary">Book Now</a>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="menu-hero" id="menu-top">
+        <div class="honeycomb-bg"></div>
+        <div class="menu-hero-content">
+            <p class="section-subtitle" style="color:#d4af37; letter-spacing:3px; font-size:0.85rem; text-transform:uppercase; margin-bottom:0.6rem;">Food &amp; Beverage</p>
+            <h1>Our <span>Menu</span></h1>
+            <p>Fresh, wholesome flavours crafted with local ingredients — from hearty breakfasts to evening bites. Download or browse the full menu below.</p>
+            <a href="menu.pdf" download="The B Hive Resort Menu.pdf" class="btn-download" id="menu-download-btn">
+                <i class="fa-solid fa-download"></i> Download Menu (PDF)
+            </a>
+        </div>
+    </header>
+
+    <!-- PDF Viewer Section -->
+    <section class="menu-section" aria-label="Menu PDF Viewer">
+        <div class="menu-container">
+            <div class="menu-info-bar">
+                <p class="menu-label">The B Hive Resort — <span>Full Menu Card</span></p>
+                <a href="menu.pdf" target="_blank" rel="noopener" class="btn-download" style="padding:0.6rem 1.4rem; font-size:0.9rem;" id="menu-open-new-tab">
+                    <i class="fa-solid fa-up-right-from-square"></i> Open in new tab
+                </a>
+            </div>
+
+            <!-- PDF embed — both object + iframe for maximum browser compatibility -->
+            <div class="pdf-frame-wrapper">
+                <iframe
+                    id="menu-pdf-iframe"
+                    src="The B Hive Menu Card A4.pdf"
+                    title="The B Hive Resort Menu Card"
+                    loading="lazy"
+                    aria-label="The B Hive Resort Menu Card PDF">
+                    <!-- Fallback if iframe is blocked -->
+                    <div class="pdf-fallback" id="menu-pdf-fallback">
+                        <p>Your browser doesn't support inline PDF viewing.</p>
+                        <a href="The B Hive Menu Card A4.pdf" download class="btn-download">
+                            <i class="fa-solid fa-download"></i> Download Menu
+                        </a>
+                    </div>
+                </iframe>
+            </div>
+
+            <p class="mobile-note">
+                <i class="fa-solid fa-circle-info" style="color:#d4af37;"></i>
+                On mobile? <a href="The B Hive Menu Card A4.pdf" target="_blank" style="color:#d4af37;">Tap here to open the full menu</a>.
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="location">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col brand-col">
+                    <a href="index.html" class="logo footer-logo">
+                        <img src="The B Hive Logo.png" alt="The B Hive Resort Logo">
+                    </a>
+                    <p>Your perfect escape into nature's embrace, offering luxury, comfort, and unforgettable memories.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Us</h3>
+                    <ul class="contact-list">
+                        <li><i class="fa-solid fa-location-dot"></i> <a href="https://maps.app.goo.gl/Yiv8AJYsCJSPyg6i8" target="_blank">Londa, Karnataka 591301 (FF4W+5Q)</a></li>
+                        <li><i class="fa-solid fa-phone"></i> 095357 45513</li>
+                        <li><i class="fa-solid fa-envelope"></i> info@thebhiveresort.com</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul class="policy-list">
+                        <li><a href="menu.html" style="color:inherit;">View Menu</a></li>
+                        <li><a href="The B Hive Menu Card A4.pdf" target="_blank" style="color:inherit;">Download Menu PDF</a></li>
+                        <li><a href="amenities.html" style="color:inherit;">Amenities</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 The B Hive Resort. All Rights Reserved.</p>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/thebhive__/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
