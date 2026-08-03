@@ -1,7 +1,9 @@
 User-agent: *
 Allow: /
 
-# Allow Googlebot to index the menu PDF directly
-Allow: /menu.pdf
+# Allow Googlebot to index menu PDFs directly
+Allow: /breakfast_menu.pdf
+Allow: /a_la_carte_menu.pdf
+Allow: /all_inclusive_menu.pdf
 
 Sitemap: https://thebhiveresort.in/sitemap.xml
